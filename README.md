@@ -22,6 +22,9 @@ $ npm install hackertalk -g
 $ htalk [url]
 ```
 
+#demo?
+![hackertalk in action](https://i.imgur.com/zW7GVme.gif)
+
 #search whole of HN
 This was uninteded,  but if you want to search with keywords, you can do it like:
 
