@@ -1,6 +1,6 @@
 {
   "name": "hackertalk",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Get HN discussion for the current URL.",
   "bin": {
     "htalk": "./bin/htalk"
