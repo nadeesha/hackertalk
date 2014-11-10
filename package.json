@@ -1,9 +1,9 @@
 {
   "name": "hackertalk",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Get HN discussion for the current URL.",
   "bin": {
-    "htalk": "./bin/htalk"
+    "htalk": "./index.js"
   },
   "main": "index.js",
   "scripts": {
