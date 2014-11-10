@@ -67,7 +67,7 @@ function processResult(err, response, result) {
 }
 
 if (process.argv.length !== 3) {
-    console.error('usage: hackertalk [url]');
+    console.error('usage: htalk [url]');
     process.exit();
 } else {
 	request.get({
