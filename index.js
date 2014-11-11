@@ -22,12 +22,14 @@ function getUserPreference(submissions) {
     require('console.table');
 
     submissions.forEach(function (submission) {
-        options.push({
-            index: options.length + 1,
-            points: submission.points,
-            title: submission.title,
-            submitted: moment(submission.created_at).fromNow()
-        });
+        if (submission.title) {
+            options.push({
+                index: options.length + 1,
+                points: submission.points,
+                title: submission.title,
+                submitted: moment(submission.created_at).fromNow()
+            });
+        };
     });
 
     console.log('\nfound multiple submissions of the url:\n')
