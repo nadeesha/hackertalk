@@ -40,5 +40,5 @@ $ htalk "multiple monitor productivity"
 #todos
 
 * Prettifying output in colors
-* I'm feeling lucky argument (`lucky`) to launch the top result without asking the user
+* ~~I'm feeling lucky argument (`lucky`) to launch the top result without asking the user~~ (thanks to [@frdmn](https://github.com/frdmn))
 * ~~Filtering out old HN posts that cause blank titles~~ (thanks to [@frdmn](https://github.com/frdmn))
