@@ -5,7 +5,8 @@
 var request = require('request'),
     moment = require('moment'),
     readline = require('readline'),
-    open = require('open');
+    open = require('open'),
+    argv = require('optimist').argv;
 
 var rl = readline.createInterface({
     input: process.stdin,
@@ -69,13 +70,15 @@ function processResult(err, response, result) {
         console.log('sorry, no one had submitted this url before');
     } else if (filtered.length === 1) {
         openResult(filtered[0].objectID);
+    } else if (argv.lucky){
+        openResult(filtered[0].objectID);
     } else {
         getUserPreference(filtered);
     }
 }
 
-if (process.argv.length !== 3) {
-    console.error('usage: htalk [url]');
+if (process.argv.length !== 3 && process.argv.length !== 4) {
+    console.error('usage: htalk <url> [--lucky]');
     process.exit();
 } else {
     request.get({

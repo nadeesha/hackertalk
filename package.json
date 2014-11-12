@@ -20,9 +20,10 @@
   },
   "homepage": "https://github.com/ncthis/hackertalk",
   "dependencies": {
-    "request": "~2.47.0",
-    "moment": "~2.8.3",
     "console.table": "~0.3.0",
-    "open": "0.0.5"
+    "moment": "~2.8.3",
+    "open": "0.0.5",
+    "optimist": "^0.6.1",
+    "request": "~2.47.0"
   }
 }
