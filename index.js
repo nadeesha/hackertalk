@@ -22,14 +22,12 @@ function getUserPreference(submissions) {
     require('console.table');
 
     submissions.forEach(function (submission) {
-        if (submission.title) {
-            options.push({
-                index: options.length + 1,
-                points: submission.points,
-                title: submission.title,
-                submitted: moment(submission.created_at).fromNow()
-            });
-        };
+        options.push({
+            index: options.length + 1,
+            points: submission.points,
+            title: submission.title,
+            submitted: moment(submission.created_at).fromNow()
+        });
     });
 
     console.log('\nfound multiple submissions of the url:\n')
@@ -54,17 +52,25 @@ function getUserPreference(submissions) {
 }
 
 function processResult(err, response, result) {
+    var filtered = [];
+
     if (err) {
         console.error(err);
         process.exit();
-    }   
+    }
 
-    if (result.nbHits === 0) {
+    result.hits.forEach(function (entry) {
+        if (entry.title) {
+            filtered.push(entry);
+        };
+    });
+
+    if (filtered.length === 0) {
         console.log('sorry, no one had submitted this url before');
-    } else if (result.nbHits === 1) {
-        openResult(result.hits[0].objectID);
+    } else if (filtered.length === 1) {
+        openResult(filtered[0].objectID);
     } else {
-        getUserPreference(result.hits);
+        getUserPreference(filtered);
     }
 }
 
@@ -72,7 +78,7 @@ if (process.argv.length !== 3) {
     console.error('usage: htalk [url]');
     process.exit();
 } else {
-	request.get({
+    request.get({
         url: 'https://hn.algolia.com/api/v1/search?query=' + encodeURIComponent(process.argv[2]),
         json: true
     }, processResult);
