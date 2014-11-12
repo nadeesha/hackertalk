@@ -39,4 +39,4 @@ $ htalk "multiple monitor productivity"
 
 * Prettifying output in colors
 * I'm feeling lucky argument (`lucky`) to launch the top result without asking the user
-* Filtering out old HN posts that cause blank titles
+* ~~Filtering out old HN posts that cause blank titles~~ (thanks to [@frdmn](https://github.com/frdmn))
