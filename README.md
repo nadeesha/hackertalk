@@ -32,8 +32,8 @@ This was uninteded,  but if you want to search with keywords, you can do it like
 $ htalk "multiple monitor productivity"
 ```
 
-#contributions
-Please! I hacked this together in a couple of hours (or less). Take a look at the todos below.
+#contributors
+- [Jonas Friedmann](https://github.com/frdmn)
 
 #todos
 
