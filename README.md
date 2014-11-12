@@ -19,10 +19,10 @@ $ npm install hackertalk -g
 
 #usage
 ```sh
-$ htalk <url> [lucky]
+$ htalk <url> [--lucky]
 ```
 
-If you provide `lucky` as last argument, it'll open the first suitable match.
+If you provide `--lucky` as last argument, it'll open the first suitable match.
 
 #demo?
 ![hackertalk in action](https://i.imgur.com/zW7GVme.gif)
