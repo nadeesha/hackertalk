@@ -76,7 +76,7 @@ function processResult(err, response, result) {
     }
 }
 
-if (process.argv.length > 4) {
+if (process.argv.length !== 3 && process.argv.length !== 4) {
     console.error('usage: htalk <url> [lucky]');
     process.exit();
 } else {
