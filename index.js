@@ -69,13 +69,15 @@ function processResult(err, response, result) {
         console.log('sorry, no one had submitted this url before');
     } else if (filtered.length === 1) {
         openResult(filtered[0].objectID);
+    } else if (process.argv[3] == "lucky"){
+        openResult(filtered[0].objectID);
     } else {
         getUserPreference(filtered);
     }
 }
 
-if (process.argv.length !== 3) {
-    console.error('usage: htalk [url]');
+if (process.argv.length > 4) {
+    console.error('usage: htalk <url> [lucky]');
     process.exit();
 } else {
     request.get({
