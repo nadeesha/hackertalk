@@ -12,32 +12,32 @@ When reading an article online, I sometimes feel that the discussion on HN is mu
 hackertalk will take the url that you give it, and search via the awesome [hn.algolia.com]
 (http://hn.algolia.com) and try to give you the submissions, on a CLI.
 
-#installation
+# installation
 ```sh
 $ npm install hackertalk -g
 ```
 
-#usage
+# usage
 ```sh
 $ htalk <url> [--lucky]
 ```
 
 If you provide `--lucky` as last argument, it'll open the first suitable match.
 
-#demo?
+# demo?
 ![hackertalk in action](https://i.imgur.com/zW7GVme.gif)
 
-#search whole of HN
+# search whole of HN
 This was uninteded,  but if you want to search with keywords, you can do it like:
 
 ```sh
 $ htalk "multiple monitor productivity"
 ```
 
-#contributors
+# contributors
 - [Jonas Friedmann](https://github.com/frdmn)
 
-#todos
+# todos
 
 * Prettifying output in colors
 * ~~I'm feeling lucky argument (`lucky`) to launch the top result without asking the user~~ (thanks to [@frdmn](https://github.com/frdmn))
