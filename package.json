@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/ncthis/hackertalk",
   "dependencies": {
-    "console.table": "~0.3.0",
+    "console.table": "~0.10.0",
     "moment": "~2.24.0",
     "open": "0.0.5",
     "optimist": "^0.6.1",
