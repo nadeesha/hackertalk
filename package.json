@@ -22,7 +22,7 @@
   "dependencies": {
     "console.table": "~0.3.0",
     "moment": "~2.24.0",
-    "open": "0.0.5",
+    "open": "6.4.0",
     "optimist": "^0.6.1",
     "request": "~2.88.0"
   }
